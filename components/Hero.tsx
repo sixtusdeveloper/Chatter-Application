@@ -26,12 +26,9 @@ const Hero = () => {
 
         <div className='flex justify-center relative my-20 z-10'>
            <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-                {/* <h2 className='uppercase tracking-wider text-xs text-center text-blue-100 max-w-86'>
-                Your Haven for Text-Based Content
-                </h2> */}
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-blue-300 ring-1 bg-black-300/10 hover:ring-gray-900/20">
-                    Announcing our next round of funding.{' '}
+                    Your Haven for Text-Based Content.{' '}
                     <a href="#" className="font-semibold text-purple">
                         <span aria-hidden="true" className="absolute inset-0" />
                         Read more <span aria-hidden="true">&rarr;</span>

@@ -3,21 +3,24 @@
 import { useState, useEffect } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import LogoImg from '@/public/img/logo-white.png'; // Adjust the path as necessary
+import LogoImg from '@/public/img/logo-white.png'; 
+import SignUpButton from './ui/SignupButton';
+import LoginButton from './ui/LoginButton';
 
 const navigation = [
-  { name: 'Product', href: '#' },
+  { name: 'Social', href: '#' },
   { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Docs', href: '#' },
+  { name: 'Connect', href: '#' },
 ];
 
 export default function Navbar({
    
-    LogoImg 
+    LogoImg, title 
     }: {
     
-    LogoImg: string;
+    LogoImg?: string;
+    title?: string;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
@@ -44,8 +47,8 @@ export default function Navbar({
               <span className="sr-only">Your Company</span>
               <img
                 alt="Chatter"
-                src={LogoImg}
-                className="h-8 w-auto"
+                src="/img/logo-white.png" 
+                className="h-10 w-auto"
               />
             </a>
           </div>
@@ -53,7 +56,7 @@ export default function Navbar({
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-100"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -66,28 +69,32 @@ export default function Navbar({
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-blue-100 hover:text-blue-200">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-5">
+            <SignUpButton 
+            title="Sign up" 
+            />
+            
+            <LoginButton 
+            title="Log in"
+            />
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   alt="Logo"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
+                  src="/img/logo-black.png"
+                  className="h-10 w-auto"
                 />
               </a>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-md p-2.5 text-black-100"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="h-6 w-6" />
@@ -100,19 +107,26 @@ export default function Navbar({
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-100 hover:tpurple-8"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-100 hover:tpurple-8"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
+                <div className="py-3">
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-100 hover:purple-8"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
                   >
                     Log in
                   </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
+                  >
+                    Sign up
+                  </a>
+                  
                 </div>
               </div>
             </div>
