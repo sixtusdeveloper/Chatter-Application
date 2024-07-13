@@ -4,6 +4,7 @@ import MagicButton from './ui/MagicButton';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { GoArrowRight } from 'react-icons/go';
+import RegForm from "@/app/pages/RegForm";
 
 const Hero = () => {
   return (
@@ -53,6 +54,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
 

@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
-import Grid from "@/components/Grid";
+// import Grid from "@/components/Grid";
 import Services from "@/components/Services";
-import Posts from "@/components/Posts";
+import Blogs from "@/components/Blogs";
 // import RegForm from "@/app/RegForm";
 
 
@@ -15,8 +15,8 @@ export default function Home() {
         {/* Components */}
         <NavBar LogoImg={""} title={""} LogoImgDark={""} />
         <Hero />
-        <Posts />
-        <Grid />
+        <Blogs />
+        {/* <Grid /> */}
         <Services />
         {/* <RegForm /> */}
       </div>
