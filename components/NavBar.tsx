@@ -9,10 +9,11 @@ import SignUpButton from './ui/SignupButton';
 import LoginButton from './ui/LoginButton';
 
 const navigation = [
-  { name: 'About', href: '#' },
   { name: 'Services', href: '#' },
-  { name: 'Docs', href: '#' },
+  { name: 'Features', href: '#' },
   { name: 'Connect', href: '#' },
+  { name: 'Blog', href: '#' },
+  { name: 'Testimonials', href: '#' },
 ];
 
 export default function Navbar({

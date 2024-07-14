@@ -38,13 +38,17 @@ const Hero = () => {
 
           <div className="flex-inline justify-center items-center my-5">
             <Link href="/RegForm">
-              <MagicButton title="Get Started" />
+              <MagicButton 
+              title="Get Started" 
+              otherClasses='text-[1.3rem]'
+              />
             </Link>
 
             <BackDropButton
               title="Read More"
-              icon={<GoArrowRight className="text-white forced-colors:purple" />}
+              icon={<GoArrowRight className="text-purple forced-colors:purple text-lg" />}
               position="right"
+              otherClasses='text-4 tracking-wildest text-purple border-gray-200 rounded-lg hover:border-black-200'
             />
           </div>
         </div>

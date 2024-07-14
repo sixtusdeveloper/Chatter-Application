@@ -89,6 +89,15 @@
 }
 
 
+.post-card {
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+}
+
+
 /* styles.css or a relevant CSS file */ 
  /* @keyframes spotlightAnimation {
   0% {
