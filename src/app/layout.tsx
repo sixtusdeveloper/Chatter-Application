@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Chatter Application",
-  description: "A chat application built with Next.js and Firebase.",
+  description: "A dynamic and innovative platform designed to cater to the needs of traditional bookworms and modern content creators alike.",
 };
 
 export default function RootLayout({

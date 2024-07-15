@@ -7,6 +7,7 @@ import LogoImg from '@/public/img/logo-white.png';
 import LogoImgDark from '@/public/img/logo-black.png';
 import SignUpButton from './ui/SignupButton';
 import LoginButton from './ui/LoginButton';
+import Link from 'next/link';
 
 const navigation = [
   { name: 'Features', href: '#Features' },
@@ -108,9 +109,11 @@ export default function Navbar({
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-5">
-          <SignUpButton 
-          title="Sign up" 
-          />
+          <Link href="/regform" legacyBehavior>
+            <SignUpButton 
+            title="Sign up" 
+            />
+          </Link>
           <LoginButton 
           title="Log in"
           />
@@ -159,7 +162,7 @@ export default function Navbar({
                   Log in
                 </a>
                 <a
-                  href="#"
+                  href="./regform"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
                 >
                   Sign up

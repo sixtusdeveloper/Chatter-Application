@@ -1,14 +1,16 @@
-import Hero from "@/components/Hero";
+import Hero from "../components/Hero";
 import Image from "next/image";
-import NavBar from "@/components/NavBar";
-import Services from "@/components/Services";
-import Posts from "@/components/Posts";
-import Features from "@/components/Features";
-import Testimonials from "@/components/Testimonials";
-import Collaboration from "@/components/Collaboration";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import FAQFeedBack from "@/components/FAQFeedBack";
+import NavBar from "../components/NavBar";
+import Services from "../components/Services";
+import Posts from "../components/Posts";
+import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
+import TestimonialCard from "../components/TestimonialCard";
+import Collaboration from "../components/Collaboration";
+import FAQ from "../components/FAQ";
+import FAQFeedBack from "../components/FAQFeedBack";
+import Footer from "../components/Footer";
+
 
 
 export default function Home() {
@@ -23,11 +25,12 @@ export default function Home() {
         <Services />
         <Posts />
         <Testimonials />
+        <TestimonialCard />
         <Collaboration />
         <FAQ />
         <FAQFeedBack />
         <Footer />
-
+        
       </div>
       
     </main>
