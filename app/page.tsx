@@ -4,8 +4,11 @@ import NavBar from "@/components/NavBar";
 import Services from "@/components/Services";
 import Posts from "@/components/Posts";
 import Features from "@/components/Features";
-import Collaboration from "@/components/Collaboration";
 import Testimonials from "@/components/Testimonials";
+import Collaboration from "@/components/Collaboration";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
+import FAQFeedBack from "@/components/FAQFeedBack";
 
 
 export default function Home() {
@@ -19,8 +22,12 @@ export default function Home() {
         <Features />
         <Services />
         <Posts />
-        <Collaboration />
         <Testimonials />
+        <Collaboration />
+        <FAQ />
+        <FAQFeedBack />
+        <Footer />
+
       </div>
       
     </main>

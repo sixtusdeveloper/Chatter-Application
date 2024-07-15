@@ -43,7 +43,7 @@ export default function Navbar({
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${scrolling ? 'bg-black-100' : 'bg-transparent'}`}>
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt="Chatter"
@@ -64,7 +64,7 @@ export default function Navbar({
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-blue-100 hover:text-blue-200">
+            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 tracking-wider text-blue-100 hover:text-blue-200">
               {item.name}
             </a>
           ))}

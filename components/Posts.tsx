@@ -62,7 +62,7 @@ const posts = [
 
 const Posts = () => {
   return (
-    <div className="relative pb-24 sm:pt-32">
+    <div className="relative pb-24 md:pt-12">
       <Spotlight className="-top-40 -right-10 md:-right-32 md:-top-20 h-screen" fill="white" />
       <Spotlight className="top-10 left-full h-[80vh] w-[60vw]" fill="purple" />
       <Spotlight className="top-28 left-80 h-[80vh] w-[60vw]" fill="blue" />
@@ -72,7 +72,7 @@ const Posts = () => {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 z-10">
-        <div className="lg:mx-0 mx-auto text-center">
+        <div className="lg:mx-0 mx-auto text-center mt-8 md:p-6">
           <div className="mx-auto max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mt-0 sm:mt-0 lg:mt-0">
             <h2 className="text-[2.7rem] font-bold tracking-wider text-white sm:text-[2.7rem]">
               From <span className="text-purple">Our Authors</span>
@@ -84,7 +84,7 @@ const Posts = () => {
             </p>
           </div>
         </div>
-        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 border-t border-gray-800 py-4 sm:mt-10 sm:py-4">
+        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 border-t border-gray-800 py-4 sm:mt-10 md:py-4">
           {posts.map((post) => (
             <article
               key={post.id}
@@ -140,12 +140,13 @@ const Posts = () => {
           ))}
         </div>
         {/* View more button */}
-        <div className="flex relative flex-col justify-center items-center">
-          <a href="#" className="mt-20 font-semibold text-purple hover:text-gray-300 text-center text-lg flex items-center gap-2">
-            <span aria-hidden="true" className="absolute inset-0" />
-            View More<span aria-hidden="true">&rarr;</span>
+        <div className="flex relative flex-col justify-center items-center mt-4 md:mt-12">
+          <a href="#" className="bg-purple-500 text-white text-md py-2 px-4 rounded focus:outline-none ring-1 flex gap-2 items-center">
+              <span aria-hidden="true" className="absolute inset-0" />
+              View More<span aria-hidden="true">&rarr;</span>
           </a>
         </div>
+
       </div>
     </div>
   );
