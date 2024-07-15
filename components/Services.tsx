@@ -16,7 +16,7 @@ const stats = [
 
 export default function WorkWithUs() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-5 sm:py-4 w-screen">
+    <div className="relative isolate overflow-hidden bg-gray-900 py-5 sm:py-4 w-screen" id="Services">
       <div className="absolute inset-0 -z-10 w-screen h-full">
         <img
           alt=""

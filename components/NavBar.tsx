@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LogoImg from '@/public/img/logo-white.png'; 
@@ -9,11 +9,11 @@ import SignUpButton from './ui/SignupButton';
 import LoginButton from './ui/LoginButton';
 
 const navigation = [
-  { name: 'Services', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Connect', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Testimonials', href: '#' },
+  { name: 'Features', href: '#Features' },
+  { name: 'Services', href: '#Services' },
+  { name: 'Posts', href: '#Posts' },
+  { name: 'Testimonials', href: '#Testimonials' },
+  { name: 'FAQ', href: '#FAQ' },
 ];
 
 export default function Navbar({
@@ -25,6 +25,7 @@ export default function Navbar({
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +39,38 @@ export default function Navbar({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const sections = navigation.map(item => document.querySelector(item.href));
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3 // Adjusted threshold to ensure better detection
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        console.log(`Section ${entry.target.id} is intersecting: ${entry.isIntersecting}`); // Debug log
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach(section => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
+  const handleClick = (href) => {
+    setActiveSection(href.substring(1)); // Remove the '#' from the href to get the id
+  };
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${scrolling ? 'bg-black-100' : 'bg-transparent'}`}>
@@ -64,7 +97,12 @@ export default function Navbar({
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 tracking-wider text-blue-100 hover:text-blue-200">
+            <a
+              key={item.name}
+              href={item.href}
+              className={`text-sm font-semibold leading-6 tracking-wider ${activeSection === item.href.substring(1) ? 'text-blue-300' : 'text-blue-100'} hover:text-blue-200`}
+              onClick={() => handleClick(item.href)}
+            >
               {item.name}
             </a>
           ))}
@@ -107,6 +145,7 @@ export default function Navbar({
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-100 hover:tpurple-8"
+                    onClick={() => handleClick(item.href)}
                   >
                     {item.name}
                   </a>
@@ -133,4 +172,5 @@ export default function Navbar({
     </header>
   );
 }
+
 

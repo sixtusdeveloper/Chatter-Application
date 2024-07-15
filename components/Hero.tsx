@@ -8,7 +8,7 @@
 
 // const Hero = () => {
 //   return (
-//     <div className="pb-6 pt-36">
+//     <div className="pb-2 pt-36" id="Hero">
 //       <div>
 //         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
 //         <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
@@ -32,7 +32,7 @@
 //           </div>
 
 //           <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-6xl" words="The Ultimate Destination for Connecting Authors and Readers" />
-//           <p className="text-center md:tracking-wider sm:tracking-wider my-4 text-[16px] md:text-[16px] lg:text-[16px]">
+//           <p className="text-center md:tracking-wider sm:tracking-wider my-4 text-[16px] md:text-[16px] lg:text-[16px] md:mb-8 mb-8">
 //             Chatter is a dynamic and innovative platform designed to cater to the needs of traditional bookworms and modern content creators alike. By offering a multi-functional space where authors and readers can create, share, and discover rich text-based content.
 //           </p>
 //           <div className="flex flex-col md:flex-row justify-center items-center mb-2 space-y-4 md:space-y-0 md:space-x-4">
@@ -47,7 +47,7 @@
 //               title="Read More"
 //               icon={<GoArrowRight className="text-purple forced-colors:purple text-lg" />}
 //               position="right"
-//               otherClasses='text-[1.3rem] flex justify-center items-center text-center tracking-wider text-purple border-gray-200 rounded-lg hover:border-black-200'
+//               otherClasses=' ring-1 text-[1.3rem] flex justify-center items-center text-center tracking-wider text-purple border-gray-200 rounded-lg hover:border-black-200'
 //             />
 //           </div>
 //         </div>
@@ -60,7 +60,7 @@
 
 
 
-
+// pages/Hero.js
 
 import Link from 'next/link';
 import BackDropButton from './ui/BackDropButton';
@@ -68,11 +68,10 @@ import MagicButton from './ui/MagicButton';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { GoArrowRight } from 'react-icons/go';
-import RegForm from "@/app/pages/RegForm";
 
 const Hero = () => {
   return (
-    <div className="pb-2 pt-36">
+    <div className="pb-2 pt-36" id="Hero">
       <div>
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
         <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
@@ -100,11 +99,13 @@ const Hero = () => {
             Chatter is a dynamic and innovative platform designed to cater to the needs of traditional bookworms and modern content creators alike. By offering a multi-functional space where authors and readers can create, share, and discover rich text-based content.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center mb-2 space-y-4 md:space-y-0 md:space-x-4">
-            <Link href="/RegForm">
-              <MagicButton 
-                title="Get Started" 
-                otherClasses='text-[1.3rem] flex justify-center items-center text-center'
-              />
+            <Link href="/RegForm" legacyBehavior>
+              <a>
+                <MagicButton 
+                  title="Get Started" 
+                  otherClasses='text-[1.3rem] flex justify-center items-center text-center'
+                />
+              </a>
             </Link>
 
             <BackDropButton

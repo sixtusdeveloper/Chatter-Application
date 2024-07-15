@@ -67,7 +67,7 @@ const FAQ: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto p-8">
+        <div className="container mx-auto p-8" id="FAQ">
             <h1 className="text-[2.7rem] font-bold text-center mb-12 mt-1 sm:mt-16 tracking-wide text-white">
                 Frequently <span className="text-purple">Asked Questions</span>
             </h1>

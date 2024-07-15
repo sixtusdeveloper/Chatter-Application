@@ -62,7 +62,7 @@ const posts = [
 
 const Posts = () => {
   return (
-    <div className="relative pb-24 md:pt-12">
+    <div className="relative pb-24 md:pt-12" id="Posts">
       <Spotlight className="-top-40 -right-10 md:-right-32 md:-top-20 h-screen" fill="white" />
       <Spotlight className="top-10 left-full h-[80vh] w-[60vw]" fill="purple" />
       <Spotlight className="top-28 left-80 h-[80vh] w-[60vw]" fill="blue" />

@@ -132,19 +132,19 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200">
+              <a href="https://github.com/sixtusdeveloper" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-blue-200">
                 <FaGithub className="text-2xl" />
               </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200">
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-blue-200">
                 <FaTwitter className="text-2xl" />
               </a>
-              <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200">
+              <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-blue-200">
                 <FaInstagram className="text-2xl" />
               </a>
-              <a href="https://linkedin.com/in/sixtusushrey" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200">
+              <a href="https://linkedin.com/in/sixtusushrey" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-blue-200">
                 <FaLinkedin className="text-2xl" />
               </a>
-              <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200">
+              <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-blue-200">
                 <FaFacebook className="text-2xl" />
               </a>
             </div>
