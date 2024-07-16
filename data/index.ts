@@ -1,10 +1,11 @@
-export const navItems = [
-    { name: "About", link: "#about" },
-    { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
-    { name: "Contact", link: "#contact" },
-  ];
-  
+export const navigation = [
+  { name: 'Features', href: '#Features' },
+  { name: 'Services', href: '#Services' },
+  { name: 'Posts', href: '#Posts' },
+  { name: 'Testimonials', href: '#Testimonials' },
+  { name: 'FAQ', href: '#FAQ' },
+];
+
   export const gridItems = [
     {
       id: 1,
@@ -68,42 +69,66 @@ export const navItems = [
       spareImg: "",
     },
   ];
-  
-  export const projects = [
+
+  export const posts = [
     {
       id: 1,
-      title: "3D Solar System Planets to Explore",
-      des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/p1.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "/ui.earth.com",
+      title: "Boost your conversion rate",
+      href: "#",
+      description:
+        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      date: "Mar 16, 2024",
+      datetime: "2024-03-16",
+      category: { title: "Marketing", href: "#" },
+      imageUrl: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?fit=crop&w=500&h=300&q=80", // Updated URL
+      author: {
+        name: "Michael Foster",
+        role: "Co-Founder / CTO",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
     },
     {
       id: 2,
-      title: "Yoom - Video Conferencing App",
-      des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "/ui.yoom.com",
+      title: "Improve your website design",
+      href: "#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec justo id mi varius ultricies. Proin quis maximus nisi. Sed convallis consequat sem, sed cursus velit tincidunt nec.",
+      date: "Apr 22, 2024",
+      datetime: "2024-04-22",
+      category: { title: "Design", href: "#" },
+      imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?fit=crop&w=500&h=300&q=80",
+      author: {
+        name: "Sarah Johnson",
+        role: "Lead Designer",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
     },
     {
       id: 3,
-      title: "AI Image SaaS - Canva Application",
-      des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "/ui.aiimg.com",
-    },
-    {
-      id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "/ui.apple.com",
+      title: "Maximize your SEO efforts",
+      href: "#",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec justo id mi varius ultricies. Proin quis maximus nisi. Sed convallis consequat sem, sed cursus velit tincidunt nec.",
+      date: "May 30, 2024",
+      datetime: "2024-05-30",
+      category: { title: "SEO", href: "#" },
+      imageUrl: "https://images.unsplash.com/photo-1542744095-291d1f67b221?fit=crop&w=500&h=300&q=80",
+      author: {
+        name: "John Doe",
+        role: "SEO Specialist",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
     },
   ];
   
+  
+ 
   export const testimonials = [
     {
       quote:
@@ -170,7 +195,7 @@ export const navItems = [
     },
   ];
   
-  export const workExperience = [
+  export const features = [
     {
       id: 1,
       title: "User Registration and Authentication",

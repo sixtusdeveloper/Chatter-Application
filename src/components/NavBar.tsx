@@ -1,21 +1,15 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
+import { navigation } from '@/data';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LogoImg from '@/public/img/logo-white.png'; 
 import LogoImgDark from '@/public/img/logo-black.png';
 import SignUpButton from './ui/SignupButton';
 import LoginButton from './ui/LoginButton';
-import Link from 'next/link';
 
-const navigation = [
-  { name: 'Features', href: '#Features' },
-  { name: 'Services', href: '#Services' },
-  { name: 'Posts', href: '#Posts' },
-  { name: 'Testimonials', href: '#Testimonials' },
-  { name: 'FAQ', href: '#FAQ' },
-];
 
 export default function Navbar({
     LogoImg, title, LogoImgDark, 
