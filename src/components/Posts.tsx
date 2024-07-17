@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { Spotlight } from './ui/Spotlight';
-import ImageWithFallback from './ui/ImageWithFallback'; // Adjust the import path as necessary
-import { posts } from '@/data'; // Adjust the import path as necessary
+import ImageWithFallback from './ui/ImageWithFallback'; // COming from ui/ImageWithFallback.tsx
+import { posts } from '@/data'; // Coming from data/index.ts
 
 
 const Posts = () => {

@@ -5,7 +5,6 @@ import Services from "../components/Services";
 import Posts from "../components/Posts";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
-// import TestimonialCard from "../components/TestimonialCard";
 import Collaboration from "../components/Collaboration";
 import FAQ from "../components/FAQ";
 import FAQFeedBack from "../components/FAQFeedBack";
@@ -25,7 +24,6 @@ export default function Home() {
         <Services />
         <Posts />
         <Testimonials />
-        {/* <TestimonialCard /> */}
         <Collaboration />
         <FAQ />
         <FAQFeedBack />

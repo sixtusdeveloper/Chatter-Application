@@ -75,8 +75,8 @@ export default function Navbar({
             <span className="sr-only">Your Company</span>
             <img
               alt="Chatter"
-              src={LogoImg || "/img/logo-white.png"}
-              className="h-10 w-auto"
+              src={LogoImg || "/img/logo-black.png"}
+              className="h-16 w-auto"
             />
           </a>
         </div>
@@ -121,8 +121,8 @@ export default function Navbar({
               <span className="sr-only">Your Company</span>
               <img
                 alt="Chatter"
-                src={LogoImgDark || "/img/logo-black.png"}
-                className="h-10 w-auto"
+                src={LogoImgDark || "/img/logo-white.png"}
+                className="h-16 w-auto"
               />
             </a>
             <button
