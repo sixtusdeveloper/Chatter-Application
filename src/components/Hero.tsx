@@ -38,7 +38,7 @@ const Hero = () => {
             Chatter is a dynamic and innovative platform designed to cater to the needs of traditional bookworms and modern content creators alike. By offering a multi-functional space where authors and readers can create, share, and discover rich text-based content.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center mb-2 space-y-4 md:space-y-0 md:space-x-4">
-            <Link href="./reg-form" legacyBehavior>
+            <Link href="/reg-form" target='_blanck' legacyBehavior>
               <a>
                 <MagicButton 
                   title="Get Started" 
@@ -51,7 +51,7 @@ const Hero = () => {
               title="Read More"
               icon={<GoArrowRight className="text-purple forced-colors:purple text-lg" />}
               position="right"
-              otherClasses=' ring-1 text-[1.3rem] flex justify-center items-center text-center tracking-wider text-purple border-gray-200 rounded-lg hover:border-black-200'
+              otherClasses=' md:ring-none text-[1.3rem] flex justify-center items-center text-center tracking-wider text-purple border-gray-200 rounded-lg hover:border-black-200'
             />
           </div>
         </div>
