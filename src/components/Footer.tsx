@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 mt-8"> 
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pb-4">
               <a href="https://github.com/sixtusdeveloper" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-blue-200">
                 <FaGithub className="text-2xl" />
               </a>
