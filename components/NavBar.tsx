@@ -63,7 +63,7 @@ export default function Navbar({
     };
   }, []);
 
-  const handleClick = (href) => {
+  const handleClick = (href: string) => {
     setActiveSection(href.substring(1)); // Remove the '#' from the href to get the id
   };
 
