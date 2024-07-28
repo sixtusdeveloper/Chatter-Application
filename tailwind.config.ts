@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { ThemeConfig, PluginAPI, RecursiveKeyValuePair } from "tailwindcss/types/config";
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const svgToDataUri = require("mini-svg-data-uri");
 const colors = require("tailwindcss/colors");
@@ -24,6 +25,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans], 
+      },
       colors: {
         black: {
           DEFAULT: "#000",
