@@ -1,14 +1,17 @@
 'use client';
 
-import Link from 'next/link';
+// import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { navigation } from '@/data';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LogoImg from '@/public/img/logo-white.png'; 
 import LogoImgDark from '@/public/img/logo-black.png';
-import SignUpButton from './ui/SignupButton';
-import LoginButton from './ui/LoginButton';
+// import SignUpButton from './ui/SignupButton';
+// import LoginButton from './ui/LoginButton';
+// import { Sign } from 'crypto';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+
 
 
 export default function Navbar({
@@ -103,14 +106,22 @@ export default function Navbar({
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-5">
-          <Link href="/regform" legacyBehavior>
+          {/* <Link href="/regform" legacyBehavior>
             <SignUpButton 
             title="Sign up" 
             />
           </Link>
           <LoginButton 
           title="Log in"
-          />
+          /> */}
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -149,18 +160,33 @@ export default function Navbar({
                 ))}
               </div>
               <div className="py-3">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
-                >
-                  Log in
-                </a>
-                <a
-                  href="./regform"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
-                >
-                  Sign up
-                </a>
+                {/* <SignedOut>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
+                  >
+                    <SignInButton />
+                     
+                  </a>
+                </SignedOut>
+                
+                <SignedIn>
+                  <a
+                    href=""
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:purple-8"
+                  >
+                    <UserButton />
+                    Sign in
+                  </a>
+                </SignedIn> */}
+
+                <SignedOut>
+                  <SignInButton />
+                </SignedOut>
+
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
               </div>
             </div>
           </div>
