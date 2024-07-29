@@ -18,7 +18,7 @@ export default function Home() {
       <div className="max-w-7xl w-screen">
       
         {/* Components */}
-        <NavBar LogoImg={""} title={""} LogoImgDark={""} />
+        <NavBar/>
         <Hero />
         <Features />
         <Services />
