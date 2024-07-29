@@ -80,7 +80,7 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-12 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-12 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -109,7 +109,7 @@ export const InfiniteMovingCards = ({
                     <img
                       src="/profile.svg"
                       alt="Profile"
-                      className="rounded-full h-15 w-15"
+                      className="rounded-full h-20 w-20"
                     />
                   </div>
                   <div className="flex flex-col gap-1s">
@@ -130,3 +130,17 @@ export const InfiniteMovingCards = ({
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
