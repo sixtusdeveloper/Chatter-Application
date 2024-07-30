@@ -8,6 +8,10 @@ const nextConfig = {
         // !! WARN !!
         ignoreBuildErrors: true,
     },
+
+    images: {
+        remotePatterns: [{ protocol: 'https', hostname: 'img.clerk.com' }],
+    },
 };
 
 export default withSentryConfig(nextConfig, {
