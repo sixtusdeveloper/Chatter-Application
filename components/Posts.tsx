@@ -3,7 +3,7 @@ import React from "react";
 import { Spotlight } from './ui/Spotlight';
 import ImageWithFallback from './ui/ImageWithFallback'; // COming from ui/ImageWithFallback.tsx
 import { posts } from '@/data'; // Coming from data/index.ts
-
+import Image from 'next/image';
 
 const Posts = () => {
   return (
@@ -66,8 +66,8 @@ const Posts = () => {
               </div>
               <div className="p-6 border-t border-gray-800 mt-auto">
                 <div className="flex items-center gap-4">
-                  <img
-                    alt=""
+                  <Image
+                    alt="author"
                     src={post.author.imageUrl}
                     className="h-10 w-10 rounded-full bg-gray-200"
                   />
