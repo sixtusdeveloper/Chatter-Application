@@ -2,6 +2,7 @@
 
 import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export const InfiniteMovingCards = ({
   items,
@@ -106,7 +107,7 @@ export const InfiniteMovingCards = ({
                 <span className="flex flex-col gap-1">
                   {/* Profile photo */}
                   <div className="me-3">
-                    <img
+                    <Image
                       src="/profile.svg"
                       alt="Profile"
                       className="rounded-full h-20 w-20"
