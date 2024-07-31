@@ -3,7 +3,7 @@ import React from "react";
 import { Spotlight } from './ui/Spotlight';
 import ImageWithFallback from './ui/ImageWithFallback'; // COming from ui/ImageWithFallback.tsx
 import { posts } from '@/data'; // Coming from data/index.ts
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const Posts = () => {
   return (
@@ -40,6 +40,7 @@ const Posts = () => {
                 alt={post.title}
                 className="w-full h-57 md:h-60 object-cover rounded-lg"
                 fallbackSrc="https://via.placeholder.com/500x300?text=Image+Not+Available"
+                
               />
               <div className="pt-6">
                 <div className="flex items-center gap-4 text-xs">
@@ -66,10 +67,13 @@ const Posts = () => {
               </div>
               <div className="p-6 border-t border-gray-800 mt-auto">
                 <div className="flex items-center gap-4">
-                  <Image
+                  <img
                     alt="author"
                     src={post.author.imageUrl}
                     className="h-10 w-10 rounded-full bg-gray-200"
+                    width="40"
+                    height="40"
+                    
                   />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-gray-300">
