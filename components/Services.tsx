@@ -57,7 +57,7 @@ export default function WorkWithUs() {
             Work <span className="text-purple">With Us</span>
           </h2>
           <p className="mt-6 text-md leading-8 text-gray-300">
-            Join our team at Chatter and help revolutionize content creation and discovery. We're looking for passionate individuals who want to make a difference. Whether you're a developer, writer, or community manager, there's a place for you here. Be part of an innovative and creative environment. Apply now and help shape the future of content!
+            Join our team at Chatter and help revolutionize content creation and discovery. We&apos;re looking for passionate individuals who want to make a difference. Whether you&apos;re a developer, writer, or community manager, there&apos;s a place for you here. Be part of an innovative and creative environment. Apply now and help shape the future of content!
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -81,7 +81,3 @@ export default function WorkWithUs() {
     </div>
   );
 }
-
-
-
-
